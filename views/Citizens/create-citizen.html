@@ -88,6 +88,24 @@
                         <input class="input" id="Profession" name="Profession" type="text" placeholder="Profession">
                     </div>
                 </div>
+                <div class="field">
+                    <label class="label">NIN:</label>
+                    <div class="control has-icons-right">
+                        <input class="input" id="NIN" name="NIN" type="text" placeholder="NIN">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">BVN:</label>
+                    <div class="control has-icons-right">
+                        <input class="input" id="BVN" name="BVN" type="text" placeholder="BVN">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Mobile Numbers:</label>
+                    <div class="control has-icons-right">
+                        <input class="input" id="Mobile Numbers" name="Mobile Numbers" type="text" placeholder="Mobile Numbers">
+                    </div>
+                </div>
 
                 <div class="field is-grouped">
                     <div class="control">
@@ -157,6 +175,14 @@
 
         const address = document.getElementById('address').value;
 
+        const profession = document.getElementById('profession').value;
+
+        const NIN = document.getElementById('NIN').value;
+
+        const BVN = document.getElementById('BVN').value;
+
+        const MobileNumbers = document.getElementById('Mobile Numbers').value;
+
 
         //start the button spinner
         document.getElementById("submitCreateUserForm").classList.add("is-loading");
@@ -168,7 +194,7 @@
                 'Content-Type': 'application/json'
             },
             //credentials: 'same-origin',
-            body: JSON.stringify({ firstName, middleName, lastName, email, dateOfBirth, nationality, address })
+            body: JSON.stringify({ firstName, middleName, lastName, email, dateOfBirth, nationality, address, Profession, NIN, BVN, MobileNumbers })
         }
 
         //call fetch

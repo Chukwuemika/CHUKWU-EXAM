@@ -45,11 +45,4 @@ export class BioData {
   @Column({ default: true })
   isActive: boolean;
 
-  @JoinColumn()
-  @OneToOne(
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    (type) => LinkedIdentity,
-    (linkedIdentity) => linkedIdentity.biodata,
-  )
-  linkedIdentity: LinkedIdentity;
 }
